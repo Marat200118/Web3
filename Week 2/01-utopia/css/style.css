@@ -1,0 +1,147 @@
+:root { 
+    --color-grey: #5C6366;
+    --color-grey-dark: #000;
+    
+    --color-primary: #00a1e6;
+    --color-primary-light: #e6f7ff;
+    
+    --whitespace-s: .5rem;
+    --whitespace-base: 1.5rem;
+    --whitespace-l: 3rem;
+    
+    --font-family-serif: Georgia, serif;
+    --font-family-sans: Helvetica, Arial, sans-serif;
+
+    --font-size-s: clamp(0.94rem, 0.94rem + 0.00vw, 0.94rem);
+    --font-size-base: clamp(1.13rem, 1.08rem + 0.22vw, 1.25rem);
+    --font-size-l: clamp(1.62rem, 1.41rem + 1.05vw, 2.22rem);
+    --font-size-xl: clamp(2.33rem, 1.77rem + 2.81vw, 3.95rem);
+}
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-family-serif);
+    line-height: 1.5;
+    padding: var(--whitespace-l) var(--whitespace-base) var(--whitespace-base);
+    color: var(--color-grey);
+}
+
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-grey-dark);
+    font-family: var(--font-family-sans);
+    font-weight: bold;
+    margin-bottom: var(--whitespace-base);
+}
+
+
+h1 {
+    font-size: var(--font-size-xl);
+    line-height: 1.2; /* overrides inherrited value from body */
+}
+
+
+h2 {
+    font-size: var(--font-size-l);
+}
+
+* + h2 {
+    margin-top: var(--whitespace-l);
+}
+
+p,
+blockquote {
+    margin-bottom: var(--whitespace-base);
+}
+
+blockquote {
+    font-style: italic;
+    font-size: var(--font-size-l);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);    
+    padding: var(--whitespace-base);
+    margin: var(--whitespace-l) 0;
+    border-radius: .25rem;
+}
+
+a,
+a:visited {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-grey);
+}
+
+.container {
+    max-width: 60ch; 
+    margin: 0 auto;
+}
+
+.intro {
+    margin-bottom: var(--whitespace-l);
+}
+
+.intro__date {
+    margin-bottom: var(--whitespace-s);
+}
+
+* + .author {
+    margin-top: var(--whitespace-l);
+}
+
+.author__image {
+    width: 3.5rem;
+    border-radius: 100%;
+    margin-bottom: var(--whitespace-s);
+}
+
+.author__name {
+    font-size: var(--font-size-base); 
+    margin: 0;
+}
+
+.author__meta {
+    font-family: var(--font-family-sans);
+}
+
+@media screen and (min-width: 50em) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 60ch 1fr;
+        max-width: none;
+        margin: 0
+    }
+
+    .container>* {
+        grid-column: 2;
+    }
+
+    .author {
+        grid-column: 1;
+        grid-row: 1;
+        writing-mode: vertical-rl;
+        justify-self: flex-end;
+    }
+}

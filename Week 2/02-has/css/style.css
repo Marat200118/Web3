@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+:root {
+  --c-light:  rgb(240, 239, 239);
+  --c-dark:  rgb(48, 45, 45);
+
+  --c-bg: var(--c-light);
+  --c-fg: var(--c-dark);
+
+  --fs-s: 1rem;
+  --fs-m: 1.3rem;
+  --fs-l: 1.6rem;
+  --fs-xl: 1.9rem;
+
+  --s0: .5rem;
+  --s1: 1rem;
+  --s2: 1.8rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: var(--fs-m);
+
+  color: var(--c-fg);
+  background-color: var(--c-bg);
+}
+
+.mode {
+  position: fixed;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+}
+
+h2{
+  font-size: var(--fs-l);
+}
+
+main {
+  margin: 0 auto;
+}
+
+li {
+  list-style: disc;
+}
+
+nav a {
+  color: inherit;
+  padding: .2rem;
+}
+
+a:hover{
+  background-color: var(--c-fg);
+  color: var(--c-bg);
+}
+
+strong {
+  font-weight: bold;
+}
+
+figure{
+  margin: var(--s1);
+}
+
+blockquote {
+  font-style: italic;
+}
+
+figcaption{
+  font-size: var(--fs-s);
+}
