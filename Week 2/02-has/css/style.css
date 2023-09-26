@@ -65,12 +65,28 @@ h2{
   font-size: var(--fs-l);
 }
 
+p {
+  max-inline-size: 70ch;
+}
+
+p:has(+ :is(p, ul)) {
+  margin-block-end: var(--s1);
+}
+
 main {
   margin: 0 auto;
 }
 
+:is(article, section):not(:has(h1)) {
+  margin-block-start: var(--s2);
+}
+
 li {
   list-style: disc;
+}
+
+li:has(+li) {
+  margin-block-end: var(--s0);
 }
 
 nav a {
@@ -81,6 +97,11 @@ nav a {
 a:hover{
   background-color: var(--c-fg);
   color: var(--c-bg);
+}
+
+nav li:has(+li a:hover) a,
+nav li:has(a:hover) +li a {
+  color: grey
 }
 
 strong {
@@ -97,4 +118,9 @@ blockquote {
 
 figcaption{
   font-size: var(--fs-s);
+}
+  
+body:has(.switch:checked) {
+  --c-bg: var(--c-dark);
+  --c-fg: var(--c-light);
 }
