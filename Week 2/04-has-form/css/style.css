@@ -60,7 +60,7 @@ label {
 }
 
 input {
-  font-size: 1.8rem;
+  font-size: 1.0rem;
   
   border-radius: var(--border-radius);
   color: inherit;
@@ -93,4 +93,19 @@ input:focus-visible {
   margin-inline-start: var(--s-1);
 }
 
+
+.form-group input:invalid:not(:placeholder-shown) + .form-group__error {
+  visibility: visible;
+}
+
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: var(--c-error);
+}
  
+.form-group .form-group__error {
+  visibility: hidden;
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+  border-color: var(--c-success);
+}
