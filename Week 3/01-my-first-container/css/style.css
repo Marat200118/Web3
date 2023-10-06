@@ -22,12 +22,13 @@ body {
 }
 
 .wrapper {
+  container-type: inline-size;
+  container-name: wrapper;
   resize: horizontal;
   overflow: hidden;
   width: 30%;
   padding: 1rem;
 }
-
 
 h2 {
   font-size: 1.5rem;
@@ -37,4 +38,32 @@ h2 {
 article {
   background-color: white;
   padding: 1rem;
+}
+
+@container wrapper (min-width: 35em) {
+  article {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  img {
+    grid-column: 1;
+  }
+  p {
+    margin: 1rem;
+  }
+}
+
+@container wrapper (min-width: 70em) {
+  article {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  img {
+    grid-row: 1 / -1;
+  }
+  p {
+    grid-row: 3;
+  }
+  h2 {
+    grid-row: 1;
+  }
 }
