@@ -39,12 +39,16 @@ p:has(+ p) {
 }
 
 .col--reading{
+  container-type: inline-size;
+  container-name: reading;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
 }
 
 .col--table{
+  container-type: inline-size;
+  container-name: table;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
@@ -84,3 +88,82 @@ p:has(+ p) {
   display: none;
 }
 
+@container reading (min-width: 40rem) {
+  .book {
+    background-image: none;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .book__title {
+    writing-mode: horizontal-tb;
+    rotate: 0deg;
+    font-size: 1.5rem;
+  }
+
+  .book__excerpt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    font-size: .9rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+
+  .book__author {
+    display: block;
+    margin-top: 3rem;
+  }
+}
+
+@container table (max-width: 60rem) {
+  .book{
+    aspect-ratio: 3/4;
+    background-image: none;
+    display: grid;
+    padding: 0;
+    justify-content: unset;
+  }
+
+  .book__title {
+    grid-column: 1;
+    grid-row: 1;
+    writing-mode: horizontal-tb;
+    rotate: 0deg;
+
+    align-self: start;
+    justify-self: center;
+    text-align:center;
+
+    margin-top: 25%;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    line-height: 1.5;
+  }
+
+  .book__author {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+
+    align-self: end;
+    justify-self: center;
+    text-align:center;
+
+    margin-bottom: 15%;
+    color: white;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+
+    z-index: 2;
+  }
+
+  .book__cover {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+} 
