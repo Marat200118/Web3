@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Image Cheatsheet</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"><span>Img</span><span>full</span></a>
+        </li>
+        <li>
+          <a href="img-part.html"><span>Img</span><span>part</span></a>
+        </li>
+        <li>
+          <a href="format.html"><span>Picture</span><span>formats</span></a>
+        </li>
+        <li>
+          <a href="art.html"><span>Picture</span><span>Art direction</span></a>
+        </li>
+        <li>
+          <a href="art-part.html"><span>Picture</span><span>Art direction - part</span></a>
+        </li>
+        <li>
+          <a href="image-set.html"><span>image-set</span></a>
+        </li>
+      </ul>
+    </nav>
+    <h1>Art directions</h1>
+    <!--
+      check the width of the images and set a source for each image width with their 2x alternative
+      
+      the final min-width rule is for resolutions that go beyond 1500px. Otherwise the 1000px image is shown
+      You can also set the beach-xxl.jpg or beack-xxl@2x.jpg as the default img src
+
+      The order of the elements is important!
+    -->
+      <picture>
+        <img class="img--full" src="./assets/img/regular/beach.jpg" alt="a lighthouse at the beach by sunset" />
+      </picture>
+  </body>
+</html>

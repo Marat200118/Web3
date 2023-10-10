@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image Cheatsheet</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><span>Img</span><span>full</span></a>
+      </li>
+      <li>
+        <a href="img-part.html"><span>Img</span><span>part</span></a>
+      </li>
+      <li>
+        <a href="format.html"><span>Picture</span><span>formats</span></a>
+      </li>
+      <li>
+        <a href="art.html"><span>Picture</span><span>Art direction</span></a>
+      </li>
+      <li>
+        <a href="art-part.html"><span>Picture</span><span>Art direction - part</span></a>
+      </li>
+      <li>
+        <a href="image-set.html"><span>image-set</span></a>
+      </li>
+    </ul>
+  </nav>
+  <h1>Img partial</h1>
+  <!--
+      Check the width of the images and order them from small to big
+      Browser decides which images it picks using the formula
+      image width / 2/3 of the viewport width = the closest to 1 (but higher than one)
+
+      Image can only take 2/3 of the viewport which is indicates by sizes 66.66vw
+      Example:
+      viewport of 768 -> 2/3 is 512
+      500 / 512 = 0,97 (too small)
+      750 / 512 = 1,4 (closest to one)
+
+      On a retina display
+      viewport of 768 -> 2/3 is 512 x 2 = 1024
+      1000 / 1024 = 0,97
+      1250 / 1024 = 1,22
+      However: only flips at a width of 839 because browser calculations / simulations are not always that accurate with retina (DPR 2)
+  -->
+  <img class="img--2thirds" src="./assets/img/regular/beach.jpg" alt="a lighthouse at the beach by sunset">
+</body>
+
+
+</html>

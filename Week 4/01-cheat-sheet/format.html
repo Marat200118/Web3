@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Image Cheatsheet</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html"><span>Img</span><span>full</span></a>
+      </li>
+      <li>
+        <a href="img-part.html"><span>Img</span><span>part</span></a>
+      </li>
+      <li>
+        <a href="format.html"><span>Picture</span><span>formats</span></a>
+      </li>
+      <li>
+        <a href="art.html"><span>Picture</span><span>Art direction</span></a>
+      </li>
+      <li>
+        <a href="art-part.html"><span>Picture</span><span>Art direction - part</span></a>
+      </li>
+      <li>
+        <a href="image-set.html"><span>image-set</span></a>
+      </li>
+    </ul>
+  </nav>
+  <h1>Image formats</h1>
+  <!-- 
+      Use a source tag for the avif, webp and de jpg images
+      Provide a fallback in the img tag 
+
+      Check with chrome: supports avif
+      Check with Safari: no support for avif -> fallback to webp
+
+      jpg fallback for ancient browsers
+    -->
+  <picture>
+
+    <img class="img--full" src="./assets/img/regular/beach.jpg" alt="a lighthouse at the beach by sunset" />
+  </picture>
+</body>
+
+</html>
