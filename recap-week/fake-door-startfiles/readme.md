@@ -47,7 +47,8 @@ const init = () => {
 
   $form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log("submitted")
+    console.log("submitted");
+    //add confetti
     event.target.reset();
   });
 }
